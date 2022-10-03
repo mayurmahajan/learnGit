@@ -10,5 +10,15 @@ jobs:
         uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: Prithvi
+      - name: List Files After Checkout1
+        run: |
+          pwd
+          ls -a
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: List Files After Checkout2
+        run: |
+          pwd
+          ls -a
       - name: Log Greetting Time
         run: echo "${{ steps.greet.outputs.time }}"
